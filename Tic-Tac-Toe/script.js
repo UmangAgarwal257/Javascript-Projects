@@ -1,3 +1,24 @@
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+const darkMode = localStorage.getItem("darkMode");
+if (darkMode === "enabled") {
+  body.classList.add("dark-mode");
+  darkModeToggle.textContent = "☀️ Light Mode";
+}
+
+darkModeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "☀️ Light Mode";
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    darkModeToggle.textContent = "🌙 Dark Mode";
+    localStorage.setItem("darkMode", null);
+  }
+});
+
 const board = document.getElementById("board");
 const squares = document.querySelectorAll(".square");
 const players = ["X", "O"];
