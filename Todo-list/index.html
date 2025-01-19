@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>TODO LIST</h1>
     <div>
-        <input id = "input" type="text" style="margin-top: 20px;">
+        <input id = "input" type="text">
         <button onclick="addTodo()">Add Todo</button>
         <button onclick="deleteFirstTodo()">Delete first todo</button>
         <button onclick="deleteLastTodo()">Delete Last todo</button>
     </div>
-    <div id="todos" style="display: flex; flex-direction: column; gap: 20px;">   
+    <div id="todos">   
     </div>
     <script src="index.js"></script>
 </body>

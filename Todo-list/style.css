@@ -1,0 +1,8 @@
+#input {
+    margin-top: 20px;
+}
+#todos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
